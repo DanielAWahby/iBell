@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m0V-at-vSp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--iBell-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iBell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bell.gif" translatesAutoresizingMaskIntoConstraints="NO" id="NW1-Wl-Qhi" customClass="GIFImageView" customModule="Gifu">
+                                <rect key="frame" x="62" y="303" width="290" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NW1-Wl-Qhi" secondAttribute="height" multiplier="1:1" id="aec-XX-Yhg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake to Ring !!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUM-YO-1to">
+                                <rect key="frame" x="0.0" y="603" width="414" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NW1-Wl-Qhi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1DZ-Yd-Lip"/>
+                            <constraint firstItem="bUM-YO-1to" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="4X5-Eh-YrI"/>
+                            <constraint firstItem="NW1-Wl-Qhi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="7D8-SK-6WO"/>
+                            <constraint firstItem="bUM-YO-1to" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LJo-ig-1Ef"/>
+                            <constraint firstItem="NW1-Wl-Qhi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="i4Y-7A-og2"/>
+                            <constraint firstItem="bUM-YO-1to" firstAttribute="top" secondItem="NW1-Wl-Qhi" secondAttribute="bottom" constant="10" id="yrF-Ih-R8K"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="iBell" id="VH0-Fu-PMp"/>
+                    <connections>
+                        <outlet property="imageView" destination="NW1-Wl-Qhi" id="xKV-yS-rrx"/>
+                        <outlet property="shakeLabel" destination="bUM-YO-1to" id="pGy-4o-rCQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ujh-mE-25i">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m0V-at-vSp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="IRe-Iv-ukL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0Jd-Ap-3ld"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZD-4V-FOM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bell.gif" width="251" height="251"/>
+    </resources>
+</document>
